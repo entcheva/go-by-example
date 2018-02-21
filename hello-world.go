@@ -7,9 +7,10 @@ import "time"
 const s string = "constant"
 
 func main() {
+
 	// Println
 	fmt.Println("hello world")
-  fmt.Println("go" + "lang")
+	fmt.Println("go" + "lang")
 
 	fmt.Println("1+1=", 1+1)
 	fmt.Println(true && false)
@@ -117,7 +118,7 @@ func main() {
 
 	var twoD [2][3]int
 	for p := 0; p < 2; p++ {
-		for q :=0; q < 3; q++ {
+		for q := 0; q < 3; q++ {
 			twoD[p][q] = p + q
 		}
 	}
@@ -148,17 +149,17 @@ func main() {
 	// of the inner slices can vary, unlike with multi-dimensional arrays.
 
 	twoDSlice := make([][]int, 3)
-    for i := 0; i < 3; i++ {
-        innerLen := i + 1
-        twoDSlice[i] = make([]int, innerLen)
-        for j := 0; j < innerLen; j++ {
-            twoDSlice[i][j] = i + j
-        }
-    }
-    fmt.Println("2d: ", twoDSlice)
+	for i := 0; i < 3; i++ {
+		innerLen := i + 1
+		twoDSlice[i] = make([]int, innerLen)
+		for j := 0; j < innerLen; j++ {
+			twoDSlice[i][j] = i + j
+		}
+	}
+	fmt.Println("2d: ", twoDSlice)
 }
 
 type T struct {
-	name string // name of the object
-	value int // its value
+	name  string // name of the object
+	value int    // its value
 }
